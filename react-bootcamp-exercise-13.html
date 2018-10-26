@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <title>React Exercise 13</title>
+</head>
+<body>
+    
+    <div id='app'></div>
+
+    <script type='text/babel'>
+        const USER_DATA = {
+            name: 'Tyler McGinnis',
+            img: 'https://avatars0.githubusercontent.com/u/2933430?v=3&s=460',
+            username: 'tylermcginnis'
+        }
+        
+        function Badge (props) {
+            return (
+            <div>
+                <h1>Name: {props.name} </h1>
+                <h3>username: {props.user} </h3>
+                <img src={props.img} />
+            </div>
+            ) 
+        }
+        
+        ReactDOM.render(
+            <Badge img={USER_DATA.img} name={USER_DATA.name} user={USER_DATA.username}/>,
+            document.getElementById('app')
+        );
+    </script>
+
+</body>
+</html>

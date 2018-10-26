@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <title>React Exercise 11</title>
+</head>
+<body>
+    <div id='app'></div>
+
+    <script type="text/babel">
+        function NameComponent(props) {
+            return <h1>{props.name}</h1>
+        }
+
+        function UserNameComponent(props) {
+            return <h3>{props.username}</h3>  
+        }
+
+        function ImageComponent(props) {
+            return <img  src={props.imgsrc} />
+        }
+
+        function Badge (props) {
+            return (
+                <div>
+                <NameComponent name='Tyler McGinnis' />
+                <UserNameComponent username='tylermcginnis' />
+                <ImageComponent imgsrc='https://avatars0.githubusercontent.com/u/2933430?v=3&s=460' />
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <Badge />,
+            document.getElementById('app')
+        );
+    </script>
+</body>
+</html>
